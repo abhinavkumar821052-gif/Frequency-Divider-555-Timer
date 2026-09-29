@@ -21,8 +21,6 @@ The output pulse duration is:
 
 **T = 1.1 × R × C**
 
-Additional trigger pulses during the HIGH period are ignored in the non-retriggerable configuration, allowing frequency division.
-
 The 555 output is applied to the CD4017 counter, whose sequential outputs can be used to obtain divided-frequency outputs.
 
 ## Components Used
@@ -45,26 +43,19 @@ The 555 output is applied to the CD4017 counter, whose sequential outputs can be
 
 ## Simulation
 
-The project was simulated in **Multisim**. The simulation shows:
+The project was simulated in **Multisim** to observe the trigger signal, capacitor charging/discharging, 555 output pulses and frequency-division behavior.
 
-- Input square-wave trigger signal
-- Capacitor charging and discharging
-- 555 timer output pulses
-- Reduced output frequency
-
-The report documents an input measurement around 2 kHz and a divided output around 1 kHz in the demonstrated setup.
+The demonstrated setup includes an input measurement around **2 kHz** and a divided output around **1 kHz**.
 
 ## Hardware Implementation
 
-The hardware circuit was assembled on a breadboard using the NE555P, CD4017, LEDs, timing components, SPDT switch and regulated 5 V supply. The sequential LED outputs demonstrate the counting and frequency-division process.
+The hardware circuit was assembled on a breadboard using the NE555P, CD4017, LEDs, timing components, SPDT switch and regulated supply. The sequential LED outputs demonstrate the counting process.
 
-## Observations
+## Sample Calculation
 
-- The 555 timer generated a single pulse for each valid trigger.
-- The CD4017 produced sequential outputs.
-- LEDs indicated the counter states.
-- Changing the resistor, capacitor or potentiometer values changed the timing.
-- A sample pulse-width calculation using 47 kΩ and 4.7 µF gives approximately **0.243 s (243 ms)**.
+For R = 47 kΩ and C = 4.7 µF:
+
+**T = 1.1 × R × C ≈ 0.243 s = 243 ms**
 
 ## Applications
 
@@ -76,11 +67,13 @@ The hardware circuit was assembled on a breadboard using the NE555P, CD4017, LED
 - Pulse generation
 - Alarm and timer circuits
 
-## Project Report
+## Documentation
 
-The complete academic project report is available in:
+A GitHub-friendly Markdown version of the project report is available here:
 
-`documentation/OEP_Project_Report.pdf`
+**[Project Report](documentation/PROJECT_REPORT.md)**
+
+The original academic report was supplied as a PDF. The current GitHub connector supports repository text-file creation but does not provide a binary PDF upload operation, so the report has been preserved in Markdown rather than pretending a PDF was uploaded.
 
 ## Team
 
